@@ -15,10 +15,28 @@ body {
   height: 100vh;
 }
 
+.clock {
+  width: 500px;
+}
 .clock__heading {
   font-family: "Playfair Display", sans-serif;
   font-weight: black;
 }
 .clock__text {
+  font-family: Lato;
   text-transform: uppercase;
+  text-align: center;
+}
+.clock__body {
+  display: flex;
+  padding: 3rem 0;
+}
+.clock #clock-indicator {
+  text-align: center;
+  padding: 1rem;
+  background-color: rgb(156, 74, 238);
+  color: white;
+  margin: 0.5rem;
+  border-radius: 0.4rem;
+  font-size: 40px;
 }/*# sourceMappingURL=main.css.map */
