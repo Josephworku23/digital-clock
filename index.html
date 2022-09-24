@@ -5,39 +5,44 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>DigiClock</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Lato:ital,wght@0,100;0,300;0,400;0,700;0,900;1,100;1,300;1,400;1,700;1,900&family=Playfair+Display:ital,wght@0,400;0,500;0,600;0,700;0,800;0,900;1,400;1,500;1,600;1,700;1,800;1,900&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="css/main.css">
 </head>
 <body>
-   <div class="clock">
-    <header class="clock__header">
-        <h1 class="clock__heading">Digi<span>clock</span></h1>
+  <div class="container">
+
+    <header>
+        <h1>clock<span>.io</span></h1>
     </header>
-    <div class="clock__body">
-        <div class="clock__container">
-            <!-- This is where the hours wll ge in  -->
-            <p id="clock-indicator" class="clock__hour">
-                11
-            </p>
-            <p class="clock__text">Hours</p>    
-        </div>
-        <div class="clock__container">
-            <!-- This is where the hours wll ge in  -->
-            <p id="clock-indicator" class="clock__minute">
-                29
-            </p>
-            <p class="clock__text">Minutes</p>    
-        </div>
-        <div class="clock__container">
-            <!-- This is where the hours wll ge in  -->
-            <p id="clock-indicator" class="clock__seconds">
-                12
-            </p>
-            <p class="clock__text">Seconds</p>    
-        </div>
-        <div class="clock__ampm">
-            <p>Am</p>
-        </div>
-    </div>
-   </div> 
+
+    <main class="clock">
+       <div class="clock__hour">
+        <h1 class="hours">
+            12
+        </h1>
+        <p class="clock__text">Hours</p>
+       </div>
+       <div class="clock__minute">
+        <h1 class="minutes">
+            30
+        </h1>
+        <p class="clock__text">Minutes</p>
+       </div>
+
+       <div class="clock__second">
+        <p class="am-pm">AM</p>
+        <h1 class="seconds">
+            60
+        </h1>
+        <p class="clock__text">Seconds</p>
+       </div>
+    </main>
+    <footer>
+        <p>Your own <span>time</span> within your hands.</p>
+    </footer>
+  </div>
+  <script src="scripts/script.js"></script>
 </body>
 </html>

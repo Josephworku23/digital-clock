@@ -1,52 +1,113 @@
-@import url('https://fonts.googleapis.com/css2?family=Lato:ital,wght@0,300;0,400;0,700;0,900;1,100;1,300;1,400;1,700;1,900&family=Playfair+Display:ital,wght@0,400;0,500;0,600;0,700;0,800;0,900;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
+
+$background-color: #1A241A;
+$interactive-color: #14E266;
+$cicle-background: #C9C9C9;
 
 
-*, 
-*:before,
-*:after {
+*, *:before, *:after {
     padding: 0;
     margin: 0;
-    box-sizing: border-box;
+    color: white;
 }
 
 body {
-    font-family: Lato;
-    display: flex;
-    align-items: center;
-    justify-content: center;
+    position: relative;
+}
+
+body {
     height: 100vh;
+    overflow-y: hidden;
+}
+
+
+
+.container {
+    height: 100%;
+    padding: 50px 30px;
+    background-color: $background-color;
+}
+
+header h1 {
+    margin-bottom: 70px;
+    font-family: 'Playfair Display';
+    font-weight: 900;
+    text-transform: uppercase;
+
+    span {
+        color: $interactive-color;
+    }
 }
 
 .clock {
-    width: 500px;
-    // background-color: black;
-    
-    &__heading {
-        font-family: 'Playfair Display', sans-serif;
-        font-weight: black;
-    }
+   
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    text-align: center;
 
-    &__text {
-        font-family: Lato;
+
+    &__text, 
+    .am-pm {
         text-transform: uppercase;
-        text-align: center;
-    }
-
-    &__body {
-        display: flex;
-        padding: 3rem 0;
-    }
-
-    #clock-indicator {
-        text-align: center;
-        padding: 1rem;
-        background-color: rgb(156, 74, 238);
-        color: white;
-        margin: .5rem;
-        border-radius: .4rem;
-
         font: {
-            size: 40px;
+            family: Lato;
+            size: 12px;
         }
     }
+
+  
+
+    .hours, 
+    .minutes, 
+    .seconds {
+        font-family: Lato;
+        
+    }
+
+
+    .hours, 
+    .minutes {
+       background-color: $cicle-background;
+       padding: 20px;
+       font-size: 50px;
+       border-radius: 50%;
+       color: $background-color;
+       margin-bottom: 1rem;
+    }
+
+    .seconds {
+        background-color: white;
+        color: $background-color;
+        margin: 10px 0;
+        border-radius: 10px;
+        padding: 15px 0;
+    }
+
+
+    .am-pm {
+        padding: 5px 15px;
+        background-color: #14E266;
+        border-radius: 15px;
+        text-transform: uppercase;
+    }
+
 }
+
+footer {
+    padding: 1rem;
+    position: absolute;
+    left: 0;
+    bottom: 100px;
+
+    p {
+        text-align: center;
+        font-size: 40px;
+        font-family: 'Playfair Display';
+        font-weight: 900;
+        span {
+            color: $interactive-color;
+        }
+    }
+
+}
+

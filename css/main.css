@@ -1,42 +1,86 @@
-@import url("https://fonts.googleapis.com/css2?family=Lato:ital,wght@0,300;0,400;0,700;0,900;1,100;1,300;1,400;1,700;1,900&family=Playfair+Display:ital,wght@0,400;0,500;0,600;0,700;0,800;0,900;1,400;1,500;1,600;1,700;1,800;1,900&display=swap");
-*,
-*:before,
-*:after {
+*, *:before, *:after {
   padding: 0;
   margin: 0;
-  box-sizing: border-box;
+  color: white;
 }
 
 body {
-  font-family: Lato;
-  display: flex;
-  align-items: center;
-  justify-content: center;
+  position: relative;
+}
+
+body {
   height: 100vh;
+  overflow-y: hidden;
+}
+
+.container {
+  height: 100%;
+  padding: 50px 30px;
+  background-color: #1A241A;
+}
+
+header h1 {
+  margin-bottom: 70px;
+  font-family: "Playfair Display";
+  font-weight: 900;
+  text-transform: uppercase;
+}
+header h1 span {
+  color: #14E266;
 }
 
 .clock {
-  width: 500px;
-}
-.clock__heading {
-  font-family: "Playfair Display", sans-serif;
-  font-weight: black;
-}
-.clock__text {
-  font-family: Lato;
-  text-transform: uppercase;
-  text-align: center;
-}
-.clock__body {
   display: flex;
-  padding: 3rem 0;
-}
-.clock #clock-indicator {
+  justify-content: space-between;
+  align-items: center;
   text-align: center;
+}
+.clock__text,
+.clock .am-pm {
+  text-transform: uppercase;
+  font-family: Lato;
+  font-size: 12px;
+}
+.clock .hours,
+.clock .minutes,
+.clock .seconds {
+  font-family: Lato;
+}
+.clock .hours,
+.clock .minutes {
+  background-color: #C9C9C9;
+  padding: 20px;
+  font-size: 50px;
+  border-radius: 50%;
+  color: #1A241A;
+  margin-bottom: 1rem;
+}
+.clock .seconds {
+  background-color: white;
+  color: #1A241A;
+  margin: 10px 0;
+  border-radius: 10px;
+  padding: 15px 0;
+}
+.clock .am-pm {
+  padding: 5px 15px;
+  background-color: #14E266;
+  border-radius: 15px;
+  text-transform: uppercase;
+}
+
+footer {
   padding: 1rem;
-  background-color: rgb(156, 74, 238);
-  color: white;
-  margin: 0.5rem;
-  border-radius: 0.4rem;
+  position: absolute;
+  left: 0;
+  bottom: 100px;
+}
+footer p {
+  text-align: center;
   font-size: 40px;
+  font-family: "Playfair Display";
+  font-weight: 900;
+}
+footer p span {
+  color: #14E266;
 }/*# sourceMappingURL=main.css.map */
